@@ -1,0 +1,15 @@
+name: Trophy Manager module tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile module tests
+        run: cc -std=c11 -Wall -Wextra -Werror tests/trophy_manager_test.c src/trophy_manager.c -o trophy-manager-tests
+      - name: Run module tests
+        run: ./trophy-manager-tests
