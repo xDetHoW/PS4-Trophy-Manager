@@ -39,4 +39,6 @@ Application version, firmware/build information, data-source status and diagnost
 - Empty states and unsupported APIs must be explicit; never display invented trophy data.
 
 ## Current implementation status
-The platform-independent menu state and trophy data structures are added in src/trophy_manager.h and src/trophy_manager.c. The native screen renderer, PS4 trophy-data discovery, statistics aggregation, backup implementation, localization and on-console testing remain unimplemented.
+Implemented in the platform-independent modules: menu state/navigation, trophy data structures, statistics aggregation, English/Italian strings, and a versioned text backup reader/writer for caller-supplied records. Host-side tests cover these core routines.
+
+Still unimplemented: native PS4 screen renderer integration, discovery/parsing of the console's actual trophy database, connecting the statistics and backup modules to real console data, backup file selection in the UI, additional languages and on-console testing. The backup module does not edit trophy records or communicate with PSN.
