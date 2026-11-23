@@ -1,3 +1,14 @@
+PS4 TROPHY MANAGER — development status
+
+This repository is being adapted from the ShadCube4 OpenOrbis sample. The current executable source is still the original ShadCube4 renderer; the Trophy Manager is not yet a runnable PS4 application.
+
+Added so far:
+- TROPHY_MANAGER_PLAN.md: scope, milestones and safety boundaries.
+- src/trophy_manager.h / src/trophy_manager.c: initial platform-independent trophy data structures and top-level menu state/navigation.
+- docs/INTERFACE.md: dark black/red interface specification and controller interaction plan.
+
+Not implemented yet: native Trophy Manager rendering, PS4 trophy-data discovery/parsing, live statistics, backup/import/export, localization and on-console validation. No PKG is claimed to be ready.
+
 ShadCube4 - PS4 homebrew renderer (OpenOrbis toolchain, hand-written GCN shaders)
 
 A physically based sky over a curved floor, a textured cube with shadows and parallax, bloom and
