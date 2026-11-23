@@ -4,10 +4,12 @@ This repository is being adapted from the ShadCube4 OpenOrbis sample. The curren
 
 Added so far:
 - TROPHY_MANAGER_PLAN.md: scope, milestones and safety boundaries.
-- src/trophy_manager.h / src/trophy_manager.c: initial platform-independent trophy data structures and top-level menu state/navigation.
-- docs/INTERFACE.md: dark black/red interface specification and controller interaction plan.
+- src/trophy_manager.h / src/trophy_manager.c: trophy data structures, menu state/navigation, statistics aggregation and English/Italian strings.
+- src/trophy_backup.h / src/trophy_backup.c: versioned local text backup writer/reader. It only serializes data passed to it; it does not discover PS4 trophy data or modify system trophy files.
+- tests/: host-side unit tests for menu/statistics/localization and backup round-trip; GitHub Actions test workflow.
+- docs/INTERFACE.md: dark black/red interface specification.
 
-Not implemented yet: native Trophy Manager rendering, PS4 trophy-data discovery/parsing, live statistics, backup/import/export, localization and on-console validation. No PKG is claimed to be ready.
+Not implemented yet: native Trophy Manager rendering, PS4 trophy-data discovery/parsing, integration of these modules into the running app, on-console backup file selection, additional languages and on-console validation. No PKG is claimed to be ready.
 
 ShadCube4 - PS4 homebrew renderer (OpenOrbis toolchain, hand-written GCN shaders)
 
