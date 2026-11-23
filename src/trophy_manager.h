@@ -25,3 +25,19 @@ const char* tm_screen_title(TmScreen screen);
 #ifdef __cplusplus
 }
 #endif
+
+/* Statistics are derived only from records supplied by the local data reader. */
+typedef struct {
+    uint32_t games_found;
+    uint32_t trophies_total;
+    uint32_t trophies_earned;
+    uint32_t bronze_earned;
+    uint32_t silver_earned;
+    uint32_t gold_earned;
+    uint32_t platinum_earned;
+    uint8_t completion_percent;
+} TmStatistics;
+
+typedef enum { TM_LANG_ENGLISH=0, TM_LANG_ITALIAN=1 } TmLanguage;
+void tm_stats_calculate(const TmGame* games, size_t game_count, TmStatistics* out);
+const char* tm_text(TmLanguage language, const char* key);
