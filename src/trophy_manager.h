@@ -22,9 +22,6 @@ void tm_ui_move(TmUiState* state, int direction);
 void tm_ui_confirm(TmUiState* state);
 void tm_ui_back(TmUiState* state);
 const char* tm_screen_title(TmScreen screen);
-#ifdef __cplusplus
-}
-#endif
 
 /* Statistics are derived only from records supplied by the local data reader. */
 typedef struct {
@@ -41,3 +38,7 @@ typedef struct {
 typedef enum { TM_LANG_ENGLISH=0, TM_LANG_ITALIAN=1 } TmLanguage;
 void tm_stats_calculate(const TmGame* games, size_t game_count, TmStatistics* out);
 const char* tm_text(TmLanguage language, const char* key);
+
+#ifdef __cplusplus
+}
+#endif
